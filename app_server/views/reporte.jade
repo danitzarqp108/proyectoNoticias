@@ -1,0 +1,33 @@
+extends layout
+block content
+   .row.page-header
+     .col-lg-12
+       h1 Nuevo Reporte
+   .row
+     .col-xs-12.col-md-6
+        
+       form.form-horizontal(action="/reporte", method="get", role="form")
+        .form-group
+          label.col-xs-15.col-sm-2.control-label(for="categoria") Categoria
+          .col-xs-30.col-sm-2
+           select#rating.form-control.input-sm(name="categoria")
+            option "Actualidad"
+            option "Espectaculos"
+            option "Economia"
+            option "Deportes"
+            option "Tecnologia"
+
+        .form-group
+          label.col-sm-1.control-label(for="nombreNoticia") Titulo
+          .col-sm-10
+            textarea#review.form-control(name="nombreNoticia", rows="1")
+
+
+        .form-group
+          label.col-sm-2.control-label(for="reporte") Reporte
+          .col-sm-10
+            textarea#review.form-control(name="review", rows="5")
+        button.btn.btn-default.pull-right Publicar
+    .col-xs-12.col-md-4
+
+

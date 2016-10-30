@@ -1,0 +1,4 @@
+/* GET home page */
+module.exports.addReporte= function(req, res){
+res.render('index', { title: 'Reporte' });
+};
